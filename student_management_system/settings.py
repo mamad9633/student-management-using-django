@@ -23,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('MY_SECRET_KEY')  # Consider using your secret key
+# Consider using your secret key
+SECRET_KEY = '&jhh$&o!#c6mdi8^n1t9!@b)p1qwic%tzx=ukq15pqa-4iu&-^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # ALLOWED_HOSTS = ['smswithdjango.herokuapp.com']
-ALLOWED_HOSTS = ['127.0.0.1']  # Not recommended but useful in dev mode
+ALLOWED_HOSTS = []  # Not recommended but useful in dev mode
 
 
 # Application definition
@@ -91,17 +92,14 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'django',
-    #     'USER': os.environ.get('DB_USER'),
-    #     'PASSWORD': os.environ.get('DB_PASS'),
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3307'
-    # }
+        'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3', }
+    # "default": {'ENGINE': 'django.db.backends.mysql',
+    #           'NAME': 'django',
+    #          'USER': os.environ.get('DB_USER'),
+    #         'PASSWORD': os.environ.get('DB_PASS'),
+    #        'HOST': '127.0.0.1',
+    #       'PORT': '3307'
+    #      }
 }
 
 
